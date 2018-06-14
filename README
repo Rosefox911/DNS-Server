@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Project 3 - DNS Server (Team lopezDelgado)
+-------------------------------------------------------------------------------
+Version 1.0
+Release date: 3/20/2013
+-------------------------------------------------------------------------------
+Project state:
+Stable (ish)
+-------------------------------------------------------------------------------
+Credits
+	Luis Lopez (lopez-archetti.l@husky.neu.edu)
+	Jorge Delgado (delgado.j@husky.neu.edu)
+-------------------------------------------------------------------------------
+Project description
+ This is a very simple DNS server.
+-------------------------------------------------------------------------------
+Documentation
+The main issue we had originally was getting the structures to be compield and seen by GCC correctly. We resolved this after Professor Mislove explained it in class. 
+After that, we had trouble finding out how to allocate the structure into the buffer, we did this by having a pointer to the structure, and then casting it as a structure and saving it to the buffer.
+Of course, handling compression was a pain as well. We resolved this by looking for pointers, and having a specific function in case there were pointers. 
+A problem we faced was with the size of the structures. If we had to redo this project again we would  have uses memcpy. 
+The structure size became a problem when matcghing up to the specifications of the project. We ended up using shorts for  most of it. 
+The sending part wasn't TOO hard, recieving was much harder. It became a problem when compression was present and of course, when we had to match the specific size.
+Our approach was to do multipel print statements all over the program and go from there. We implemented everything piece by piece and just stayed focus on a specific thing. 
+Finding the strtok command was amazing. Our program supports any and all ports thanks to this awesome command!
+As with any C program, segmentation faults were a pain. But GDB with "bt" (backtrace) was SUPER helpful.
+
+-------------------------------------------------------------------------------
+Installation instructions
+With GCC installed on the system, just do make clean and then make. The format is @<server:port> <name>.
+-------------------------------------------------------------------------------
+Additional Notes
+
